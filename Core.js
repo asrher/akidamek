@@ -1713,6 +1713,14 @@ let mese = await Miku.sendMessage(m.chat, {image:{url:emoji.images[4].url}, capt
 }
 break
 
+case 'حذف': {
+    if (!m.quoted) reply(false)
+    let { chat, fromMe, id, isBaileys } = m.quoted
+    if (!isBaileys) return replay(`ذي مب رسالتي يغبي .`)
+    Miku.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: true, id: m.quoted.id, participant: m.quoted.sender } })
+}
+break
+
  case 'احذف': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
@@ -2345,7 +2353,7 @@ case 'ملصق': {
  case 'وظيفتي':
     if (isBan) return reply(mess.ban)	 			
     if (isBanChat) return reply(mess.banChat)
-                        const gimana = [`طباخ`, `شرطي`, `مربي`, `فأر تجارب`,`حارس`,`باطل`,`شحاذ`,`معلم`,`استاذ`,`طبيب اسنان`,`رائد فضاء`,`فلكي`,`طبيب`,`مهندس`,`مؤذن`]
+                        const gimana = [`طباخ`, `شرطي`, `مربي`, `فأر تجارب`,`حارس`,`باطل`,`شحاذ`,`معلم`,`استاذ`,`طبيب اسنان`,`رائد فضاء`,`فلكي`,`طبيب`,`مهندس`,`مؤذن`,`محامي`]
                         const ya = gimana[Math.floor(Math.random() * gimana.length)]
     Miku.sendMessage(from, { text: `وظيفتك هي ${ya}` }, { quoted: m })
     
@@ -2776,7 +2784,10 @@ case 'الاوامر':{
 ⧉ منشن مخفي لكل الاعضاء 
  
 ⧉ -احذف
-⧉ حذف رسالة عضو و البوت 
+⧉ حذف رسالة عضو 
+
+⧉ -حذف
+⧉ حذف رسالة البوت 
  
 ⧉ -رابط
 ⧉ جلب رابط القروب 

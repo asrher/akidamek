@@ -45,7 +45,7 @@ store.bind(Miku.ev)
     const callerId = json.content[0].attrs['call-creator']
     if (json.content[0].tag == 'offer') {
     let pa7rick = await Miku.sendContact(callerId, global.owner)
-    Miku.sendMessage(callerId, { text: `Baka! You will be blocked automatically for calling me!`}, { quoted : pa7rick })
+    Miku.sendMessage(callerId, { text: `لا تتصل على البوت رجاءا والا سيتم حضرك منه\nكلم المطور`}, { quoted : pa7rick })
     await sleep(8000)
     await Miku.updateBlockStatus(callerId, "block")
     }
@@ -94,62 +94,30 @@ Miku.ev.on('group-participants.update', async (anu) => {
                     ppgroup = 'https://wallpapercave.com/wp/O6XUqOo.jpg'
                 }
 
-                let targetname = await Miku.getName(num)
-                grpmembernum = metadata.participants.length
-
-                mikuWelcomepp = await getBuffer(`https://hardianto.xyz/api/welcome3?profile=${encodeURIComponent(ppuser)}&name=${encodeURIComponent(targetname)}&bg=https://wallpapercave.com/wp/O6XUqOo.jpg&namegb=${encodeURIComponent(metadata.subject)}&member=${encodeURIComponent(grpmembernum)}`)
-                mikuByepp = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURIComponent(ppuser)}&name=${encodeURIComponent(targetname)}&bg=https://wallpapercave.com/wp/O6XUqOo.jpg&namegb=${encodeURIComponent(metadata.subject)}&member=${encodeURIComponent(grpmembernum)}`)
-
-                if (anu.action == 'add') {
-                let WAuserName = num
-                Mikutext = `
-Hello @${WAuserName.split("@")[0]},
-
-I am *Miku Nakano*, Welcome to ${metadata.subject}.
-
-*Group Description:*
-${metadata.desc}
-`
-
-let Mikubuttons = [
-    {buttonId: `none`, buttonText: {displayText: '🏵️ Welcome buddy 🏵️'}, type: 1}
-    ]
-    let buttonMessage = {
-    jpegThumbnail: ppuser,
-    mentions: [num],
-    caption: Mikutext,
-    footer: `${global.BotName}`,
-    buttons: Mikubuttons,
-    headerType: 4,
-    }
-Miku.sendMessage(anu.id, buttonMessage)
-                } else if (anu.action == 'remove') {
-                	let WAuserName = num
-                    Mikutext = `
-Sayonara 👋, @${WAuserName.split("@")[0]},
-
-I hope you will come back soon, but we are not going to miss you though!
-`
-
-let Mikubuttons = [
-    {buttonId: `none`, buttonText: {displayText: '👋 Sayonara buddy 👋'}, type: 1}
-    ]
-    let buttonMessage = {
-    jpegThumbnail:ppuser,
-    mentions: [num],
-    caption: Mikutext,
-    footer: `${global.BotName}`,
-    buttons: Mikubuttons,
-    headerType: 4,
-    
-    }
-    Miku.sendMessage(anu.id, buttonMessage)
-                    }
-                }
-            } catch (err) {
-                console.log(err)
-            }
-    })
+                let nama = await Miku.getName(num)
+                memb = metadata.participants.length
+                
+                Kon = await getBuffer(`https://hardianto.xyz/api/welcome3?profile=${encodeURIComponent(ppuser)}&name=${encodeURIComponent(nama)}&bg=https://i.ibb.co/Lhv49dJ/akida.jpg&namegb=${encodeURIComponent(metadata.subject)}&member=${encodeURIComponent(memb)}`)
+                
+                Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURIComponent(ppuser)}&name=${encodeURIComponent(nama)}&bg=https://i.ibb.co/Lhv49dJ/akida.jpg&namegb=${encodeURIComponent(metadata.subject)}&member=${encodeURIComponent(memb)}`)
+                                if (anu.action == 'add') {
+                                    Miku.sendMessage(anu.id, { image: Kon, contextInfo: { mentionedJid: [num] }, caption: `
+                السلام عليكم @${num.split("@")[0]},
+                نورتنا في ${metadata.subject}
+                
+                الوصف : ${metadata.desc}
+                
+                نتمنى لك/ي وقتا ممتعا معنا`} )
+                                } else if (anu.action == 'remove') {
+                                    Miku.sendMessage(anu.id, { image: Tol, contextInfo: { mentionedJid: [num] }, caption: ` @${num.split("@")[0]} خرج/ت من المجموعة ${metadata.subject}
+                
+                                    بالتوفيق ان شاء الله` })
+                                }
+                            }
+                        } catch (err) {
+                            console.log(err)
+                        }
+                    })
     
 
 

@@ -200,7 +200,7 @@ Miku.ev.on('group-participants.update', async (anu) => {
             else if (reason === DisconnectReason.timedOut) { console.log("Connection TimedOut, Reconnecting..."); startMiku(); }
             else { console.log(`Unknown DisconnectReason: ${reason}|${connection}`) }
         }
-        //console.log('Connected...', update)
+        console.log('Connected...', update)
     })
 
     Miku.ev.on('creds.update', saveState)

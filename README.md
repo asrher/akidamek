@@ -3,7 +3,7 @@
     <img src="https://c.tenor.com/NJVFjOYEcsIAAAAC/miku-gotoubun.gif" width="610">
      
 </p>
-<h1 align="center"> https://dashboard.heroku.com/new?template=https://github.com/asrher/akidamek.git
+<h1 align="center"> Miku Nakano (Beta)
 </h1>
 <p align="center"> 
   Konochiwa Senpai, I am "Miku Nakano" a WhatsApp bot made by Fantox to do everything that is possible on WhatsApp based on WhatsApp Multi Device(MD) Support.
@@ -29,17 +29,9 @@
       
 </br> 
    
-### ✧✧ This bot is still under development so if you want to recode/modify it, pls check this main repo once in 2 days because i am continuously debugging it and making major changes in it.
+#### ✧✧ This bot is still under development so if you want to recode/modify it, pls check this main repo once in 2 days because i am continuously debugging it and making major changes in it.
 </br>
-
-### ✧ Use `Heroku Deploy Method 2` for easy and more convenient deploy(Trust me).    
-
-
-### ✧ Deploy Video tutorial:
-- Here's the [video tutorial](https://youtu.be/fZdM7Ahb4JE) on how to deploy and host Miku bot.
-- [Video Guide](https://youtu.be/fZdM7Ahb4JE)
-</br>
-
+  
 
 ## ✧✧✧ Why use Miku as your Base?
 
@@ -52,6 +44,7 @@
 6. No API key needed!
 7. Full premission to Recode.
 8. Regularly Updating and Improving.
+9. Supports Latest WhatsApp, GB, Fouad, Alpha, YoWhatsApp and all other mods (MD).
 
 ✧ The main motto of this project is to provide Beginner Devs a base without any limitations 😊.
 ✧ Check "Credits" section and Support Them too.
@@ -60,25 +53,23 @@
 ```
 </br>
 
-## ✧✧✧ Heroku Deployment Method 1:
+## ✧✧✧ Video tutorial for Heroku Deploy:
 
-#### ✧ Fork this repo.
-#### ✧ Click this scan button below and scan the given QR within 10 seconds from your WhatsApp. 
-<a href="https://mikuqr.herokuapp.com/"><img src="https://play-lh.googleusercontent.com/901aMQFFnVoX2T-YuJmTIwpPve_SUgMv_QSyzMSPtAqt_l0CyXN1DxfD6xXU0r2f9iM=w240-h480-rw" width="100" />
-</a>
-#### ✧ Next download that `session.json` file and replace it with the older one present the hompage of your [`Fork`](https://github.com/FantoX001/Miku-MD/fork).
+<a href="https://youtu.be/fZdM7Ahb4JE"><img src="https://i.ibb.co/71mYRh4/116-1161192-podcast-subscribe-listen-button-youtube-sign-hd-png.png" alt="Watch tutorial on YouTube" border="0"  width="160"></a>
 
-#### ✧ After that edit the `README.md` file and change the template link present on line no:`39` with your forked repo link.(Example: `https://github.com/<your GitHub username>/Miku-MD`)
+Here's the Video Tuturial for Deploying and Hosting Miku Bot on Heroku.
 
-#### ✧ Next
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/FantoX001/Miku-MD)
-
-
-## ✧✧✧ Heroku Deployment Method 2:
+## ✧✧✧ Heroku Deployment Method:
 
 #### ✧ `Fork` this repo.
-#### ✧ `Scan` the QR , download the `session.json` file and replace it with the older one present on the hompage of your `Fork`.
+
+#### ✧ Click this scan button below and scan the given QR within 15 seconds from your WhatsApp. 
+<a href="https://miku-qr--fantox001.repl.co/"><img src="https://play-lh.googleusercontent.com/901aMQFFnVoX2T-YuJmTIwpPve_SUgMv_QSyzMSPtAqt_l0CyXN1DxfD6xXU0r2f9iM=w240-h480-rw" width="90" />
+</a>
+#### Or, Scan indirectly from my `repl.it`
+
+#### <a href="https://replit.com/@FantoX001/Miku-QR?v=1"><img src="https://i.ibb.co/pPQjJL2/replit-logo-png-transparent.png" alt="replit-logo-png-transparent" border="0"  width="120"></a>
+#### ✧ Download the `session.json` file and upload it on the hompage of your `Fork`.
 #### ✧ Go to your `Heroku` account.
 #### ✧ Create a `random app` in Heroku with any name.
 #### ✧ Connect your `GitHub` with `Heroku`
@@ -111,6 +102,7 @@ heroku/nodejs
 ```
 git clone https://github.com/FantoX001/Miku-MD.git
 cd Miku-MD
+npm i
 npm start
 ```
 
@@ -119,6 +111,8 @@ npm start
 - Node.js
 - Libwebp
 - FFmpeg
+
+Note: If you don't pre-install these plugins before CMD Installation bot couldn't execute name commands!
 </br> 
 
 ## ✧✧✧ Termux Deployment Method
@@ -135,6 +129,7 @@ pkg install wget
 pkg install imagemagick -y
 git clone https://github.com/FantoX001/Miku-MD
 cd Miku-MD
+npm i
 npm start
 ```
 

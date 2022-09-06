@@ -6,8 +6,6 @@
 https://dashboard.heroku.com/new?template=https://github.com/asrher/akidamek.git
 </h1>
 <p align="center"> 
-  Konochiwa Senpai, I am "Miku Nakano" a WhatsApp bot made by Fantox to do everything that is possible on WhatsApp based on WhatsApp Multi Device(MD) Support.
-
 <p align="center">
   <a href="https://github.com/FantoX001/Miku-MD/fork">
     <img src="https://img.shields.io/github/forks/FantoX001/Miku-MD?label=Fork&style=social">

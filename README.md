@@ -6,7 +6,7 @@
 https://dashboard.heroku.com/new?template=https://github.com/asrher/akidamek.git
 <p align="center"> 
 <p align="center">
-  <a href="https://github.com/FantoX001/Miku-MD/fork">
+  <a href="https://dashboard.heroku.com/new?template=https://github.com/asrher/akidamek.git">
     <img src="https://img.shields.io/github/forks/FantoX001/Miku-MD?label=Fork&style=social">
     
     

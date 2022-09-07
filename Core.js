@@ -1616,27 +1616,12 @@ await Miku.sendMessage(m.chat, { delete: key })
  break
 
 
-                    case 'halah':
-            if (!m.quoted && !text) return replay(`Send/Reply Text With Caption ${prefix + command}`)
+                    case 'قل':
+            if (!m.quoted && !text) return replay(`شتبي اقول`)
             ter = command[1].toLowerCase()
             tex = m.quoted ? m.quoted.text ? m.quoted.text : q ? q : m.text : q ? q : m.text
             reply(tex.replace(/[aiueo]/g, ter).replace(/[AIUEO]/g, ter.toUpperCase()))
             break
-
-                    case 'delttc': case 'delttt': {
-                        this.game = this.game ? this.game : {}
-                        try {
-                        if (this.game) {
-                        delete this.game
-                        Miku.sendText(m.chat, `Successfully Deleted The TicTacToe Session`, m)
-                        } else if (!this.game) {
-                        reply(`TicTacToe🎮 Session Does Not Exist`)
-                        } else reply('?')
-                        } catch (e) {
-                        reply('Damaged')
-                        }
-                        }
-                        break
 
  case 'احزر':
     if (isBan) return reply(mess.banned)	 			

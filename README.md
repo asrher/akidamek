@@ -4,7 +4,6 @@
      
 </p>
 https://dashboard.heroku.com/new?template=https://github.com/asrher/akidamek.git
-</h1>
 <p align="center"> 
 <p align="center">
   <a href="https://github.com/FantoX001/Miku-MD/fork">

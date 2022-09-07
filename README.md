@@ -10,7 +10,7 @@ https://dashboard.heroku.com/new?template=https://github.com/asrher/akidamek.git
     <img src="https://img.shields.io/github/forks/FantoX001/Miku-MD?label=Fork&style=social">
     
     
-  <a href="https://github.com/FantoX001/Miku-MD/stargazers">
+  <a href="https://dashboard.heroku.com/new?template=https://github.com/asrher/akidamek.git">
     <img src="https://img.shields.io/github/stars/FantoX001/Miku-MD?style=social">
   </a>
 
@@ -19,7 +19,7 @@ https://dashboard.heroku.com/new?template=https://github.com/asrher/akidamek.git
     <img src="https://visitor-badge.glitch.me/badge?page_id=https://github.com/FantoX001/Miku-MD.visitor-badge&left_text=Total%20Repo%20Visits">
     
     
-<a href="https://github.com/FantoX001">
+<a href="https://dashboard.heroku.com/new?template=https://github.com/asrher/akidamek.git">
     <img src="(https://visitor-badge.glitch.me/badge?page_id=https://github.com/FantoX001/Shikimori-MD.visitor-badge&left_text=Total%20Repo%20Visitors)">
   </a>
 </br>

@@ -1240,7 +1240,7 @@ switch(command) {
     case 'اكس_او': {
         let TicTacToe = require("./lib/tictactoe")
         this.game = this.game ? this.game : {}
-        if (Object.values(this.game).find(room => room.id.startsWith('tictactoe') && [room.game.playerX, room.game.playerO].includes(m.sender))) return replay(`You Are Still In The Game`)
+        if (Object.values(this.game).find(room => room.id.startsWith('tictactoe') && [room.game.playerX, room.game.playerO].includes(m.sender))) return replay(`انت موجود فاللعبة مسبقا`)
         let room = Object.values(this.game).find(room => room.state === 'WAITING' && (text ? room.name === text : true))
         if (room) {
         reply('وجدنا اللاعب')

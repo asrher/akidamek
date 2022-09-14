@@ -99,13 +99,13 @@ Miku.ev.on('group-participants.update', async (anu) => {
                 if (anu.action == 'add') {
                     let WAuserName = num
                     mikutext = `
-                    السلام عليكم @${WAuserName.split("@")[0]},
+السلام عليكم @${WAuserName.split("@")[0]},
     
-    نورتنا في ${metadata.subject}.
+نورتنا في ${metadata.subject}.
     
-    الوصف :
+الوصف:
     ${metadata.desc}
-    نتمنى لك/ي وقتا ممتعا معنا `
+نتمنى لك/ي وقتا ممتعا معنا `
     
         let buttonMessage = {
         image: await getBuffer(ppgroup),
@@ -120,7 +120,7 @@ Miku.ev.on('group-participants.update', async (anu) => {
         mikutext = `
  @${WAuserName.split("@")[0]},
 
- بالتوفيق ان شاء الله
+بالتوفيق ان شاء الله
 `
 
 let buttonMessage = {

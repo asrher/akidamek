@@ -103,7 +103,6 @@ Miku.ev.on('group-participants.update', async (anu) => {
     
 نورتنا في ${metadata.subject}.
     
-الوصف:
     ${metadata.desc}
 نتمنى لك/ي وقتا ممتعا معنا `
     

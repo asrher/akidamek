@@ -93,30 +93,32 @@ Miku.ev.on('group-participants.update', async (anu) => {
                     ppgroup = 'https://wallpapercave.com/wp/O6XUqOo.jpg'
                 }
 
-                let nama = await Miku.getName(num)
-                memb = metadata.participants.length
-                
-                Kon = await getBuffer(`https://hardianto.xyz/api/welcome3?profile=${encodeURIComponent(ppuser)}&name=${encodeURIComponent(nama)}&bg=https://i.ibb.co/Lhv49dJ/akida.jpg&namegb=${encodeURIComponent(metadata.subject)}&member=${encodeURIComponent(memb)}`)
-                
-                Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURIComponent(ppuser)}&name=${encodeURIComponent(nama)}&bg=https://i.ibb.co/Lhv49dJ/akida.jpg&namegb=${encodeURIComponent(metadata.subject)}&member=${encodeURIComponent(memb)}`)
-                                if (anu.action == 'add') {
-                                    Miku.sendMessage(anu.id, { image: Kon, contextInfo: { mentionedJid: [num] }, caption: `
-                السلام عليكم @${num.split("@")[0]},
-                نورتنا في ${metadata.subject}
-                
-                الوصف : ${metadata.desc}
-                
-                نتمنى لك/ي وقتا ممتعا معنا`} )
-                                } else if (anu.action == 'remove') {
-                                    Miku.sendMessage(anu.id, { image: Tol, contextInfo: { mentionedJid: [num] }, caption: ` @${num.split("@")[0]} خرج/ت من المجموعة ${metadata.subject}
-                
-                                    بالتوفيق ان شاء الله` })
-                                }
-                            }
-                        } catch (err) {
-                            console.log(err)
-                        }
-                    })
+                let targetname = await Miku.getName(num)
+                grpmembernum = metadata.participants.length
+            
+                if (anu.action == 'add') {
+                    let WAuserName = num
+                    mikutext = `
+                    السلام عليكم @${WAuserName.split("@")[0]},
+    
+                    نورتنا في  ${metadata.subject}.
+    
+                    الوصف :
+    ${metadata.desc}
+    نتمنى لك/ي وقتا ممتعا معنا`
+        Miku.sendMessage(anu.id, buttonMessage)
+    } else if (anu.action == 'remove') {
+        let WAuserName = num
+        mikutext = `
+ @${WAuserName.split("@")[0]},
+
+بالتوفيق ان شاء الله
+`
+Miku.sendMessage(anu.id, buttonMessage)}}
+} catch (err) {
+    console.log(err)
+}
+})
     
 
 

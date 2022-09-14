@@ -101,19 +101,36 @@ Miku.ev.on('group-participants.update', async (anu) => {
                     mikutext = `
                     السلام عليكم @${WAuserName.split("@")[0]},
     
-                    نورتنا في  ${metadata.subject}.
+    نورتنا في ${metadata.subject}.
     
-                    الوصف :
+    الوصف :
     ${metadata.desc}
-    نتمنى لك/ي وقتا ممتعا معنا`
+    نتمنى لك/ي وقتا ممتعا معنا `
+    
+        let buttonMessage = {
+        image: await getBuffer(ppgroup),
+        mentions: [num],
+        caption: mikutext,
+        footer: `${global.BotName}`,
+        headerType: 4,
+        }
         Miku.sendMessage(anu.id, buttonMessage)
     } else if (anu.action == 'remove') {
         let WAuserName = num
         mikutext = `
  @${WAuserName.split("@")[0]},
 
-بالتوفيق ان شاء الله
+ بالتوفيق ان شاء الله
 `
+
+let buttonMessage = {
+image:await getBuffer(ppuser),
+mentions: [num],
+caption: mikutext,
+footer: `${global.BotName}`,
+headerType: 4,
+
+}
 Miku.sendMessage(anu.id, buttonMessage)}}
 } catch (err) {
     console.log(err)
